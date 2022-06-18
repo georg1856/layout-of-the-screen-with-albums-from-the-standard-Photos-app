@@ -1,0 +1,1 @@
+# layout-of-the-screen-with-albums-from-the-standard-Photos-app
