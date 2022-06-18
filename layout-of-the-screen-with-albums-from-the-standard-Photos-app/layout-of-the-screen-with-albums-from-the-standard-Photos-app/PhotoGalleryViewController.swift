@@ -18,6 +18,8 @@ class PhotoGalleryViewController: UIViewController {
     enum Section: String, CaseIterable {
         case myAlbums = "Мои альбомы"
         case sharedAlbums = "Общие альбомы"
+        case typesMediaFiles = "Типы медиафайлов"
+        case other = "Другое"
     }
 
     static let sectionHeaderElementKind = "sectionHeaderElementKind"
@@ -73,5 +75,11 @@ class PhotoGalleryViewController: UIViewController {
                                 forSupplementaryViewOfKind: PhotoGalleryViewController.sectionHeaderElementKind,
                                 withReuseIdentifier: MyAlbumsHeaderCollectionReusableView.identifier)
 
+        collectionView.register(TypesMediaFilesCollectionViewCell.self,
+                                forCellWithReuseIdentifier: TypesMediaFilesCollectionViewCell.identifier)
+
+        collectionView.register(ListHeaderCollectionReusableView.self,
+                                forSupplementaryViewOfKind: PhotoGalleryViewController.sectionHeaderElementKind,
+                                withReuseIdentifier: ListHeaderCollectionReusableView.identifier)
     }
 }
