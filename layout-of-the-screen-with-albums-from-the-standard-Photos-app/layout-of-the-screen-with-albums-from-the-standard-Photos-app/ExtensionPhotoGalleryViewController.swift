@@ -28,6 +28,16 @@ extension PhotoGalleryViewController {
                                                                     for: indexPath) as? MyAlbumsCollectionViewCell else { fatalError() }
                 cell.configure(with: itemIdentifier)
                 return cell
+
+            case .typesMediaFiles:
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TypesMediaFilesCollectionViewCell.identifier, for: indexPath) as? TypesMediaFilesCollectionViewCell else { fatalError() }
+                cell.configure(with: itemIdentifier)
+                return cell
+
+            case .other:
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TypesMediaFilesCollectionViewCell.identifier, for: indexPath) as? TypesMediaFilesCollectionViewCell else { fatalError() }
+                cell.configure(with: itemIdentifier)
+                return cell
             }
         }
 
@@ -52,6 +62,19 @@ extension PhotoGalleryViewController {
                 supplementaryView.label.text = Section.allCases[indexPath.section].rawValue
                 return supplementaryView
 
+            case .typesMediaFiles:
+                guard let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                                              withReuseIdentifier: ListHeaderCollectionReusableView.identifier,
+                                                                                              for: indexPath) as? ListHeaderCollectionReusableView else { fatalError() }
+                supplementaryView.label.text = Section.allCases[indexPath.section].rawValue
+                return supplementaryView
+
+            case .other:
+                guard let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                                              withReuseIdentifier: ListHeaderCollectionReusableView.identifier,
+                                                                                              for: indexPath) as? ListHeaderCollectionReusableView else { fatalError() }
+                supplementaryView.label.text = Section.allCases[indexPath.section].rawValue
+                return supplementaryView
             }
         }
 
@@ -61,13 +84,19 @@ extension PhotoGalleryViewController {
 
     func snapshotForCurrentState() -> NSDiffableDataSourceSnapshot<Section, CellModel> {
         var snapshot = NSDiffableDataSourceSnapshot<Section, CellModel>()
-        snapshot.appendSections([Section.myAlbums, Section.sharedAlbums])
+        snapshot.appendSections([Section.myAlbums, Section.sharedAlbums, Section.typesMediaFiles, Section.other])
 
-        let itemsForMyAlbumSection = CellData.setCellsMyAlbumsSection()
-        snapshot.appendItems(itemsForMyAlbumSection, toSection: .myAlbums)
+        let itemsMyAlbumSection = CellData.setCellsMyAlbumsSection()
+        snapshot.appendItems(itemsMyAlbumSection, toSection: .myAlbums)
 
-        let itemsForPeopleAndPlacesSection = CellData.setCellsSharedAlbumsSection()
-        snapshot.appendItems(itemsForPeopleAndPlacesSection, toSection: .sharedAlbums)
+        let itemsSharedAlbumsSection = CellData.setCellsSharedAlbumsSection()
+        snapshot.appendItems(itemsSharedAlbumsSection, toSection: .sharedAlbums)
+
+        let itemsMediaTypesSection = CellData.setCellsTypesMediaFilesSection()
+        snapshot.appendItems(itemsMediaTypesSection, toSection: .typesMediaFiles)
+
+        let itemsOtherSection = CellData.setCellsOtherSection()
+        snapshot.appendItems(itemsOtherSection, toSection: .other)
 
         return snapshot
     }
@@ -148,6 +177,46 @@ extension PhotoGalleryViewController {
                                                                 trailing: 0)
                 section.boundarySupplementaryItems = [headerSection]
                 section.orthogonalScrollingBehavior = .groupPaging
+                return section
+
+            case .typesMediaFiles:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                       heightDimension: .fractionalWidth(0.12))
+
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
+                let headerSection = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+                                                                                elementKind: PhotoGalleryViewController.sectionHeaderElementKind,
+                                                                                alignment: .topLeading)
+
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 30, trailing: 0)
+                section.boundarySupplementaryItems = [headerSection]
+
+                return section
+
+            case .other:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                       heightDimension: .fractionalWidth(0.12))
+
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
+                let headerSection = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+                                                                                elementKind: PhotoGalleryViewController.sectionHeaderElementKind,
+                                                                                alignment: .topLeading)
+
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 30, trailing: 0)
+                section.boundarySupplementaryItems = [headerSection]
+
                 return section
             }
         }

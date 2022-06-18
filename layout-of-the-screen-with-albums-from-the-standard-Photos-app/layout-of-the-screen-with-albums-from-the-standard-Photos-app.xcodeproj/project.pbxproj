@@ -16,6 +16,8 @@
 		40281DE6285DD930009446FC /* MyAlbumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DE5285DD930009446FC /* MyAlbumsCollectionViewCell.swift */; };
 		40281DE8285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DE7285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift */; };
 		40281DEA285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DE9285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift */; };
+		40281DEC285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DEB285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift */; };
+		40281DEE285DDBF0009446FC /* ListHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DED285DDBF0009446FC /* ListHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		40281DE5285DD930009446FC /* MyAlbumsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsCollectionViewCell.swift; sourceTree = "<group>"; };
 		40281DE7285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionPhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		40281DE9285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		40281DEB285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesMediaFilesCollectionViewCell.swift; sourceTree = "<group>"; };
+		40281DED285DDBF0009446FC /* ListHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				40281DE7285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift */,
 				40281DE5285DD930009446FC /* MyAlbumsCollectionViewCell.swift */,
 				40281DE9285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift */,
+				40281DEB285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift */,
+				40281DED285DDBF0009446FC /* ListHeaderCollectionReusableView.swift */,
 				40281DE3285DD758009446FC /* CellData.swift */,
 				40281DD3285DD540009446FC /* Main.storyboard */,
 				40281DD6285DD541009446FC /* Assets.xcassets */,
@@ -147,11 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40281DEE285DDBF0009446FC /* ListHeaderCollectionReusableView.swift in Sources */,
 				40281DE6285DD930009446FC /* MyAlbumsCollectionViewCell.swift in Sources */,
 				40281DE2285DD619009446FC /* PhotoGalleryViewController.swift in Sources */,
 				40281DCE285DD540009446FC /* AppDelegate.swift in Sources */,
 				40281DE8285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift in Sources */,
 				40281DEA285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift in Sources */,
+				40281DEC285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift in Sources */,
 				40281DE4285DD758009446FC /* CellData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
