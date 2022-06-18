@@ -12,6 +12,7 @@
 		40281DD7285DD541009446FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40281DD6285DD541009446FC /* Assets.xcassets */; };
 		40281DDA285DD541009446FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40281DD8285DD541009446FC /* LaunchScreen.storyboard */; };
 		40281DE2285DD619009446FC /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DE1285DD619009446FC /* PhotoGalleryViewController.swift */; };
+		40281DE4285DD758009446FC /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DE3285DD758009446FC /* CellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		40281DD9285DD541009446FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40281DDB285DD541009446FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40281DE1285DD619009446FC /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
+		40281DE3285DD758009446FC /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				40281DCD285DD540009446FC /* AppDelegate.swift */,
 				40281DE1285DD619009446FC /* PhotoGalleryViewController.swift */,
+				40281DE3285DD758009446FC /* CellData.swift */,
 				40281DD3285DD540009446FC /* Main.storyboard */,
 				40281DD6285DD541009446FC /* Assets.xcassets */,
 				40281DD8285DD541009446FC /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				40281DE2285DD619009446FC /* PhotoGalleryViewController.swift in Sources */,
 				40281DCE285DD540009446FC /* AppDelegate.swift in Sources */,
+				40281DE4285DD758009446FC /* CellData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
