@@ -18,6 +18,7 @@
 		40281DEA285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DE9285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift */; };
 		40281DEC285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DEB285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift */; };
 		40281DEE285DDBF0009446FC /* ListHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40281DED285DDBF0009446FC /* ListHeaderCollectionReusableView.swift */; };
+		4034529628631BB1008165BB /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034529528631BB1008165BB /* CellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		40281DE9285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		40281DEB285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesMediaFilesCollectionViewCell.swift; sourceTree = "<group>"; };
 		40281DED285DDBF0009446FC /* ListHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		4034529528631BB1008165BB /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +68,69 @@
 		40281DCC285DD540009446FC /* layout-of-the-screen-with-albums-from-the-standard-Photos-app */ = {
 			isa = PBXGroup;
 			children = (
-				40281DCD285DD540009446FC /* AppDelegate.swift */,
-				40281DE1285DD619009446FC /* PhotoGalleryViewController.swift */,
-				40281DE7285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift */,
-				40281DE5285DD930009446FC /* MyAlbumsCollectionViewCell.swift */,
-				40281DE9285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift */,
-				40281DEB285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift */,
-				40281DED285DDBF0009446FC /* ListHeaderCollectionReusableView.swift */,
-				40281DE3285DD758009446FC /* CellData.swift */,
-				40281DD3285DD540009446FC /* Main.storyboard */,
-				40281DD6285DD541009446FC /* Assets.xcassets */,
-				40281DD8285DD541009446FC /* LaunchScreen.storyboard */,
-				40281DDB285DD541009446FC /* Info.plist */,
+				4034529728631C34008165BB /* View */,
+				4034529428631B8D008165BB /* Model */,
+				4034529928631C9B008165BB /* Controller */,
+				4034529328631B1E008165BB /* DataCell */,
+				4034529A28631CBE008165BB /* Extension */,
+				4034529828631C5A008165BB /* Service Files */,
 			);
 			path = "layout-of-the-screen-with-albums-from-the-standard-Photos-app";
+			sourceTree = "<group>";
+		};
+		4034529328631B1E008165BB /* DataCell */ = {
+			isa = PBXGroup;
+			children = (
+				40281DE3285DD758009446FC /* CellData.swift */,
+			);
+			path = DataCell;
+			sourceTree = "<group>";
+		};
+		4034529428631B8D008165BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4034529528631BB1008165BB /* CellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4034529728631C34008165BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40281DE5285DD930009446FC /* MyAlbumsCollectionViewCell.swift */,
+				40281DEB285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift */,
+				40281DE9285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift */,
+				40281DED285DDBF0009446FC /* ListHeaderCollectionReusableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4034529828631C5A008165BB /* Service Files */ = {
+			isa = PBXGroup;
+			children = (
+				40281DCD285DD540009446FC /* AppDelegate.swift */,
+				40281DD3285DD540009446FC /* Main.storyboard */,
+				40281DD8285DD541009446FC /* LaunchScreen.storyboard */,
+				40281DD6285DD541009446FC /* Assets.xcassets */,
+				40281DDB285DD541009446FC /* Info.plist */,
+			);
+			path = "Service Files";
+			sourceTree = "<group>";
+		};
+		4034529928631C9B008165BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40281DE1285DD619009446FC /* PhotoGalleryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4034529A28631CBE008165BB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				40281DE7285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +209,7 @@
 				40281DE2285DD619009446FC /* PhotoGalleryViewController.swift in Sources */,
 				40281DCE285DD540009446FC /* AppDelegate.swift in Sources */,
 				40281DE8285DD99D009446FC /* ExtensionPhotoGalleryViewController.swift in Sources */,
+				4034529628631BB1008165BB /* CellModel.swift in Sources */,
 				40281DEA285DDA1D009446FC /* MyAlbumsHeaderCollectionReusableView.swift in Sources */,
 				40281DEC285DDBA7009446FC /* TypesMediaFilesCollectionViewCell.swift in Sources */,
 				40281DE4285DD758009446FC /* CellData.swift in Sources */,
@@ -311,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 636TS9JX4X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "layout-of-the-screen-with-albums-from-the-standard-Photos-app/Info.plist";
+				INFOPLIST_FILE = "layout-of-the-screen-with-albums-from-the-standard-Photos-app/Service Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +391,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 636TS9JX4X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "layout-of-the-screen-with-albums-from-the-standard-Photos-app/Info.plist";
+				INFOPLIST_FILE = "layout-of-the-screen-with-albums-from-the-standard-Photos-app/Service Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

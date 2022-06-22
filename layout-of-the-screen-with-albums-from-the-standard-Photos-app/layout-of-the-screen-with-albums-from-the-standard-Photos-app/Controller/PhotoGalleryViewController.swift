@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class PhotoGalleryViewController: UIViewController {
 
     enum Section: String, CaseIterable {
