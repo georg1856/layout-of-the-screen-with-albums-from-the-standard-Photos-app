@@ -127,8 +127,10 @@ extension PhotoGalleryViewController {
                                                                  bottom: 0,
                                                                  trailing: 10)
 
-                let containerGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95),
-                                                                heightDimension: .fractionalWidth(1.2))
+                let containerGroupSize = NSCollectionLayoutSize(widthDimension:
+                                                        UIScreen.main.bounds.width > 400 ? .fractionalWidth(0.45) : .fractionalWidth(0.96),
+                                                                heightDimension:
+                                                        UIScreen.main.bounds.width > 400 ? .fractionalWidth(0.55) : .fractionalWidth(1.2))
                 let containerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: containerGroupSize,
                                                                         subitem: subGroup, count: 2)
 
@@ -157,8 +159,10 @@ extension PhotoGalleryViewController {
                                                              bottom: 20,
                                                              trailing: 10)
 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95),
-                                                       heightDimension: .fractionalWidth(0.6))
+                let groupSize = NSCollectionLayoutSize(widthDimension:
+                                                    UIScreen.main.bounds.width > 400 ? .fractionalWidth(0.45) : .fractionalWidth(0.95),
+                                                       heightDimension:
+                                                    UIScreen.main.bounds.width > 400 ? .fractionalWidth(0.3) : .fractionalWidth(0.6))
 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                                subitem: item, count: 2)
@@ -184,7 +188,8 @@ extension PhotoGalleryViewController {
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                       heightDimension: .fractionalWidth(0.12))
+                                                       heightDimension:
+                                                        UIScreen.main.bounds.width > 400 ? .fractionalWidth(0.07) : .fractionalWidth(0.1))
 
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
 
@@ -204,7 +209,8 @@ extension PhotoGalleryViewController {
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                       heightDimension: .fractionalWidth(0.12))
+                                                       heightDimension:
+                                                        UIScreen.main.bounds.width > 400 ? .fractionalWidth(0.07) : .fractionalWidth(0.1))
 
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
 
